@@ -13,12 +13,12 @@
             Mariuxi Heyer
           <div class="contact_info">
             <img src="html_finalprojimages/envelope.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
-          jdoe@jeemail.com
+          mariuxiy@gmail.com
         </div>
         <div style="clear:both;"></div>
         <div class="contact_info">
           <img src="html_finalprojimages/phone.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
-          +13456764598
+          +13474514971
 
         </div>
         </div>
@@ -27,7 +27,7 @@
           <!-- Add the links for Skills, Projects and Recommendation here -->
           <a class="topmenu" href="#skills">Skills</a>
           <a class="topmenu" href="#projects">Projects</a>
-          <a class="topmenu" href="#recommendation">Recommendations</a>
+          <a class="topmenu" href="#contact">Contact Me</a>
         </div>
       </div>    
     </nav>
@@ -151,17 +151,15 @@
       </div>
     </section>
 
-    <!-- Recommendation Form -->
+    <!-- Contact Form -->
     <section id="contact">
-      <div class="flex_center">
-        <fieldset>
-          <legend class="introduction">Leave a Recommendation</legend>          
-          <input type="text" placeholder="Name (Optional)"> <br/>
-          <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
-          <div class="flex_center">
-            <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
-          </div>
-        </fieldset>
+      <div class="contact-box">
+        <h2 class="introduction">Contact Me</h2>                
+        <input type="text" id="subject" placeholder="Subject" style="width: 85%; box-sizing: border-box"> <br/>
+        <textarea id="new_message" cols="500" rows="10" placeholder="Message"></textarea>
+        <div class="flex_center">
+          <button id="recommend_btn" onclick="sendMessage()">Send</button>
+        </div>
       </div>
     </section>
 
@@ -176,7 +174,7 @@
 
     <div class="popup" id="popup" class="flex_center">
       <img src="html_finalprojimages/checkmark--outline.svg"/>
-      <h3>Thanks for leaving a recommendation!</h3>
+      <h3>Thanks for your message!</h3>
       <button onclick="showPopup(false)">Ok</button>
     </div>
   </body>

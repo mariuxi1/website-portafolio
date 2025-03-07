@@ -205,6 +205,32 @@ h2 {
 
 /* Recommendations */
 
+.contact-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 900px;  /* Adjust width as needed */
+  padding: 20px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.contact-box.subject {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 900px;  /* Adjust width as needed */
+  padding: 20px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
 .all_recommendations {
   display: flex;
   align-items: center;
