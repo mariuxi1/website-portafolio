@@ -12,7 +12,7 @@ body {
   margin-top:-1cm;
   padding-top: 2cm;
   padding-bottom: 2cm;
-  height: 20mm;
+  height: 26mm;
  }
 
 .topmenu {
@@ -44,6 +44,7 @@ body {
 }
 
 .profile_name .contact_info {
+  padding-top: 5px;
   font-size: 15px;
   font-style: italic;
   display: flex;
@@ -54,6 +55,17 @@ body {
 .contact_info img {
   width:25px;
   margin-right: 10px;
+  float:left;
+}
+
+.contact_info.social {
+  display: inline-block;
+  align-items: right;
+  flex-direction: column;
+}
+
+.contact_info.social img {
+  width:29px;
   float:left;
 }
 
@@ -210,7 +222,7 @@ h2 {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  width: 900px;  /* Adjust width as needed */
+  width: 700px;  /* Adjust width as needed */
   padding: 20px;
   margin: 50px auto;
   background: white;
