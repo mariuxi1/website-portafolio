@@ -98,6 +98,7 @@ h2 {
 
 .container {
   display: flex;
+  width: 100%;
 }
 
 /* About Me */
@@ -127,6 +128,10 @@ h2 {
   padding-top: 10px;
 }
 
+.description{
+  padding: 0 100px 0 50px;
+}
+
 /* Skills */
 
 .all_skills {
@@ -135,7 +140,7 @@ h2 {
   flex-flow: wrap;
 }
 
-.skill {
+ .skill {
   border: 1px solid gray;
   display: block;
   border-radius: 6px;
