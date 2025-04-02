@@ -39,14 +39,13 @@ function showPopup(bool) {
 function viewCertification(button){
   // Find the parent <div> of the clicked button
   let div = button.closest('div');
-  let parentDiv = div.parentElement; 
-  let details = parentDiv.querySelector("details");  // Get the existing details element inside the div
+  let details = div.nextElementSibling; // Get the existing details element inside the div
 
-  if(details && button.textContent == "Close")
+  if(details && details.tagName.toLowerCase() === "details" &&
+   button.textContent == "Close")
   {
-    details.open = false;  // Close the details element
+    details.remove();
     button.textContent = "View";  // Change button text to "Open View"
-    details.style.display = "none";
   }
   else
   {
@@ -81,7 +80,7 @@ function viewCertification(button){
           break;
         case 'c-agile-foundations':
           summary.textContent = "Agile Foundations";  // Customize text
-         details.appendChild(summary);
+          details.appendChild(summary);
 
           //append the image
           image.src = "https://media.licdn.com/dms/image/v2/D5622AQFsguyZtBphfw/feedshare-shrink_1280/feedshare-shrink_1280/0/1704656735760?e=1746662400&v=beta&t=mHeOTnihpCC4l10Z3ckODwY4yEdwyxC_7SwuISpPTnA";  // Replace with the actual image path
