@@ -35,3 +35,68 @@ function showPopup(bool) {
     document.getElementById('popup').style.visibility = 'hidden'
   }
 }
+
+function viewCertification(button){
+  // Find the parent <div> of the clicked button
+  let div = button.closest('div');
+  let parentDiv = div.parentElement; 
+  let details = parentDiv.querySelector("details");  // Get the existing details element inside the div
+
+  if(details && button.textContent == "Close")
+  {
+    details.open = false;  // Close the details element
+    button.textContent = "View";  // Change button text to "Open View"
+    details.style.display = "none";
+  }
+  else
+  {
+    details = document.createElement("details");
+    // Create and append the summary element
+    let summary = document.createElement("summary");
+    summary.style.fontStyle = "normal";
+    summary.style.fontSize = "20px";
+    let image = document.createElement("img");
+
+    switch(div.id)
+    {
+      case 'c-project-management':
+          summary.textContent = "Atlassian Agile Project Management Professional Certificate"; 
+          details.appendChild(summary);
+
+          //append the image
+          image.src = "https://media.licdn.com/dms/image/v2/D5622AQF_6iw4LHqLyQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1704863621514?e=1746662400&v=beta&t=v5hsCElRPzAqTUYYSRZfxSzYfnOb-XDP3vbZKuUCq3c";  // Replace with the actual image path
+          image.alt = "Project Management Image";  // Add alt text
+          details.appendChild(image);
+          div.appendChild(details);
+          break;
+        case 'c-cloud-computing':
+          summary.textContent = "Introduction to Cloud Computing";  // Customize text
+          details.appendChild(summary);
+
+          //append the image
+          image.src = "cloud-pdf.pdf";  // Replace with the actual image path
+          image.alt = "Cloud Computing";  // Add alt text
+          details.appendChild(image);
+          div.appendChild(details);
+          break;
+        case 'c-agile-foundations':
+          summary.textContent = "Agile Foundations";  // Customize text
+         details.appendChild(summary);
+
+          //append the image
+          image.src = "https://media.licdn.com/dms/image/v2/D5622AQFsguyZtBphfw/feedshare-shrink_1280/feedshare-shrink_1280/0/1704656735760?e=1746662400&v=beta&t=mHeOTnihpCC4l10Z3ckODwY4yEdwyxC_7SwuISpPTnA";  // Replace with the actual image path
+          image.alt = "Agile Foundations";  // Add alt text
+          details.appendChild(image);
+          div.appendChild(details);
+          break;
+        default:
+          break;
+    }
+    details.open = true;
+    details.style.margin= "20px 20px 0 0";
+    div.insertAdjacentElement('afterend', details);
+
+    //set view button to say Close
+    button.textContent = "Close";
+  }
+}
